@@ -10,7 +10,7 @@ Write a function numberJoy() which tests if a positive integer n is Harshad and 
 function numberJoy(n) {
   let digits = n.toString().split('');
   let summed = digits.reduce(function(a,b) {
-    return Number(a) + Number(b);
+    return a + Number(b);
   }, 0);
   return (summed * summed.toString().split('').reverse().join('') == n);
 }
