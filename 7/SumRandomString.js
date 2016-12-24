@@ -9,16 +9,11 @@ str = "In 2015, I want to know how much does iPhone 6+ cost?"
 The numbers are 2015, 6
 Sum is 2021.
 */
-
 function sumFromString(str){
   if (str.trim().length == 0){
     return 0;
   }
-  if (str.split(' ').length > 1) {
-    str = str.replace(/\W+/g, " ").split(' ');
-  } else {
-    str = str.replace(/\W+/g, " ").split('');
-  }
+  str = str.replace(/\D/g,' ').split(' ');
   let myArr = [];
   str.forEach(word => {
     if(!isNaN(word)){
