@@ -11,5 +11,10 @@ function diamond(n){
   if (n % 2 == 0 || n < 1){
     return null;
   }
-  let mid = '*'.repeat(n);
+  let first = [];
+  let count = (n / 2) -0.5;
+  for (var i = 0; i < count; i ++) {
+    first.push(((' ').repeat(count - i) + '*'.repeat(i) + (' ').repeat(count - i)));
+  }
+  console.log(first.join('\n'));
 }
