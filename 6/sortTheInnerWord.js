@@ -9,8 +9,11 @@
 
 function sortTheInnerContent(words) {
   let splitWord = words.split(' ');
-  splitWord.forEach(word => {
-    let letters = word.split('').slice(1, word.length - 1);
-    letters.sort(function(a, b) {return b-a;});
+  let sorted = splitWord.map((word) => {
+    let letters = word.substring(1, word.length -1);
+    return letters.split('').sort((a,b) => {
+      return b - a;
+    });
   });
+  console.log(sorted);
 }
